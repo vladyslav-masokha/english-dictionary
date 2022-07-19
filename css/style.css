@@ -1,0 +1,227 @@
+::-moz-selection {
+  background: #00025f;
+  color: #fff;
+}
+
+::selection {
+  background: #00025f;
+  color: #fff;
+}
+
+:root {
+  --main-color: #fff;
+  --color-red: #ff6d6d;
+  --bg-dark: #000;
+  --bg-light: #fff;
+}
+
+body {
+  --bg-header: #4848ff;
+  --bg-header-fixed: #6e6eff;
+  --color-logo: #deff25;
+  --bg-nav: #5050ff;
+  --color-theme: #000;
+  --bg-about: #a340ff;
+  --color-git: #000;
+  --bg-words: #3887ff;
+  --bg-footer: #5d5dff;
+  --color-word: #b3d4fc;
+}
+body.dark {
+  --bg-header: #000053;
+  --bg-header-fixed: #003b49;
+  --color-logo: #deff25;
+  --bg-nav: #000033;
+  --color-theme: #fff;
+  --bg-about: #330063;
+  --color-git: #fff;
+  --bg-words: #0b004b;
+  --bg-footer: #000053;
+  --color-word: #b3d4fc;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.header {
+  background: var(--bg-header);
+  transition: all 0.5s ease-in-out;
+}
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+.header__nav {
+  position: fixed;
+  top: 50px;
+  background: var(--bg-nav);
+  left: 0;
+  padding: 60px 30px;
+  min-height: 100vh;
+  text-align: center;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+}
+.header__nav li {
+  margin: 60px 0 0 0;
+}
+.header__nav li:first-child {
+  margin: 0;
+}
+.header__nav_link {
+  color: var(--main-color);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.header__logo_link {
+  color: var(--main-color);
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.header__logo_link span {
+  color: var(--color-logo);
+}
+
+.fixed {
+  width: 100%;
+  position: fixed;
+  background: var(--bg-header-fixed);
+}
+
+.visible {
+  transform: none;
+}
+
+.fa-circle-half-stroke {
+  color: var(--color-theme);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.burger {
+  border: none;
+  padding: 0;
+  background: transparent;
+  width: 30px;
+  height: 20px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+.burger__line {
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.burger::before, .burger::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+  position: absolute;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.burger::before {
+  top: 0;
+}
+.burger::after {
+  bottom: 0;
+}
+
+.about {
+  padding: 200px 0;
+  background: var(--bg-about);
+  transition: all 0.5s ease-in-out;
+}
+.about__body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+.about__row {
+  max-width: 300px;
+}
+.about__row_title {
+  color: var(--main-color);
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.about__row_description {
+  margin: 10px 0 0 0;
+  color: var(--main-color);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.about__row_description a {
+  color: var(--main-color);
+}
+
+.fa-github {
+  margin: 0 0 0 5px;
+  color: var(--color-git);
+}
+
+.words {
+  background: var(--bg-words);
+}
+.words__body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 30px 15px;
+}
+.words__title {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.words__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10px;
+}
+.words__list_item {
+  margin: 5px 0 0 0;
+  color: var(--color-red);
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+.words__list_item span {
+  color: var(--color-word);
+}
+
+.footer {
+  margin: auto 0 0 0;
+  background: var(--bg-footer);
+}
+.footer__body {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.copyright {
+  color: var(--main-color);
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}

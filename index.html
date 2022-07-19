@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ua">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>English dictionary | MonScript</title>
+		<!-- Підлючення іконок: Font Awesome-->
+		<script
+			src="https://kit.fontawesome.com/ff48da9210.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Підлючення шрифтів: Montserrat (Regular / Bold / Black) -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Підлючення CSS -->
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<!-- Підлючення JS -->
+		<script src="./js/main.js" defer></script>
+
+		<!-- Підлючення Favicon -->
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- Шапка -->
+			<header class="header">
+				<div class="container">
+					<div class="header__body">
+						<!-- Navigation -->
+						<nav class="header__nav">
+							<li><a href="#" class="header__nav_link">Головна</a></li>
+							<li><a href="#" class="header__nav_link">Послуги</a></li>
+							<li><a href="#" class="header__nav_link">Про Нас</a></li>
+							<li><i class="fa-solid fa-circle-half-stroke"></i></li>
+						</nav>
+						<!-- Burger -->
+						<button class="burger">
+							<span class="burger__line"></span>
+						</button>
+
+						<!-- Logo -->
+						<div class="header__logo">
+							<a href="./index.html" class="header__logo_link"
+								><span>English</span> dictionary</a
+							>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- Про Нас -->
+			<section class="about" id="about">
+				<div class="container">
+					<div class="about__body">
+						<div class="about__row">
+							<h1 class="about__row_title">
+								The site was developed in July 2022
+							</h1>
+							<p class="about__row_description">
+								Source code on
+								<a href="https://github.com/" target="_blank"
+									><i class="fa-brands fa-github"></i> GitHub</a
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="words">
+				<div class="container">
+					<div class="words__body">
+						<h2 class="words__title">Words</h2>
+						<ul class="words__list"></ul>
+					</div>
+				</div>
+			</section>
+
+			<!--Футер  -->
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__body">
+						<span class="copyright">&copy;2022 Vladyslav Masokha</span>
+					</div>
+				</div>
+			</footer>
+		</div>
+		
+		<script type="text/template" id="word-template">
+			<li class="words__list_item"><span>{{en}}</span> - {{ua}}</li>
+		</script>
+	</body>
+</html>
